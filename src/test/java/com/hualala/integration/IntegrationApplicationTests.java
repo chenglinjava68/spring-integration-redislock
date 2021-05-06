@@ -1,4 +1,4 @@
-package com.zhifa.integration;
+package com.hualala.integration;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

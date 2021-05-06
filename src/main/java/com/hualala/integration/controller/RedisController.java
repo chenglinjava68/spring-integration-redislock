@@ -1,4 +1,4 @@
-package com.zhifa.integration.controller;
+package com.hualala.integration.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.integration.redis.util.RedisLockRegistry;
@@ -39,8 +39,7 @@ public class RedisController {
     @GetMapping("testLock")
     public void testLock() throws InterruptedException {
         Lock lock = redisLockRegistry.obtain("lock");
-
-        boolean isLock = lock.tryLock(5, TimeUnit.SECONDS);//这里是等待获取锁的意思，5秒还没拿到就放弃
+        boolean isLock = lock.tryLock(5, TimeUnit.SECONDS);
         String s = Thread.currentThread().getName();
         if (num > 0 && isLock) {
             System.out.println(s + "=>排号成功，号码是：" + num);
@@ -53,14 +52,6 @@ public class RedisController {
         } else {
             System.out.println(s + "=>排号失败,号码已经被抢光");
         }
-
-    }
-
-    /**
-     *
-     */
-    @GetMapping("getNum")
-    public void getNum() {
 
     }
 

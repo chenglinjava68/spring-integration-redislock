@@ -1,4 +1,4 @@
-package com.zhifa.integration;
+package com.hualala.integration;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
